@@ -259,18 +259,6 @@
         "lines": [
           1,
           null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          1,
-          1,
-          1,
-          1,
-          1,
-          null,
           1,
           1,
           1,
@@ -289,42 +277,29 @@
           1,
           1,
           1,
-          1,
-          1,
-          1,
-          1,
-          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
           null,
           null,
           1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
           null,
           null
         ]
       },
       "/Users/nick/Turing/2mod/projects/relational_rails/spec/features/trails/show_spec.rb": {
         "lines": [
-          1,
-          null,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          null,
-          1,
-          1,
-          1,
-          1,
-          null,
-          null
+
         ]
       },
       "/Users/nick/Turing/2mod/projects/relational_rails/spec/models/park_spec.rb": {
@@ -333,15 +308,17 @@
           null,
           1,
           1,
-          2,
-          2,
-          2,
-          2,
-          2,
+          1,
+          1,
+          1,
+          1,
+          1,
           null,
           null,
           1,
-          2,
+          1,
+          null,
+          null,
           null,
           null
         ]
@@ -353,6 +330,7 @@
           1,
           1,
           1,
+          null,
           null
         ]
       },
@@ -365,31 +343,7 @@
       },
       "/Users/nick/Turing/2mod/projects/relational_rails/spec/models/trail_spec.rb": {
         "lines": [
-          1,
-          null,
-          1,
-          1,
-          2,
-          2,
-          2,
-          2,
-          2,
-          null,
-          null,
-          1,
-          2,
-          null,
-          null
-        ]
-      },
-      "/Users/nick/Turing/2mod/projects/relational_rails/app/models/trail.rb": {
-        "lines": [
-          1,
-          1,
-          1,
-          1,
-          1,
-          null
+
         ]
       },
       "/Users/nick/Turing/2mod/projects/relational_rails/app/controllers/parks_controller.rb": {
@@ -410,21 +364,8 @@
           1,
           null
         ]
-      },
-      "/Users/nick/Turing/2mod/projects/relational_rails/app/controllers/trails_controller.rb": {
-        "lines": [
-          1,
-          1,
-          1,
-          null,
-          null,
-          1,
-          1,
-          null,
-          null
-        ]
       }
     },
-    "timestamp": 1652390468
+    "timestamp": 1652396606
   }
 }
