@@ -1,0 +1,4 @@
+<h1><%=@park.name%> Trails:</h1>
+<% @trails.each do |trail| %>
+<p><%= link_to trail.name, "/trails/#{trail.id}"%><p>
+<% end %>

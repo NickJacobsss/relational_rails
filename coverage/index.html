@@ -14,7 +14,7 @@
       <img src="./assets/0.12.3/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" class="hide">
-      <div class="timestamp">Generated <abbr class="timeago" title="2022-05-12T16:21:08-05:00">2022-05-12T16:21:08-05:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2022-05-13T14:59:16-05:00">2022-05-13T14:59:16-05:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -30,7 +30,7 @@
      covered at
      <span class="covered_strength">
        <span class="green">
-         1.1
+         1.13
        </span>
     </span> hits/line
     )
@@ -39,12 +39,12 @@
   <a name="AllFiles"></a>
 
   <div>
-    <b>26</b> files in total.
+    <b>28</b> files in total.
   </div>
 
   <div class="t-line-summary">
-    <b>130</b> relevant lines,
-    <span class="green"><b>130</b> lines covered</span> and
+    <b>149</b> relevant lines,
+    <span class="green"><b>149</b> lines covered</span> and
     <span class="red"><b>0</b> lines missed. </span>
     (<span class="green">
   100.0%
@@ -82,6 +82,17 @@
           </tr>
         
           <tr class="t-file">
+            <td class="strong t-file__name"><a href="#05432f3be4fb1aa8a07ac471d1f663d44ee25865" class="src_link" title="app/controllers/park_trails_controller.rb">app/controllers/park_trails_controller.rb</a></td>
+            <td class="green strong cell--number t-file__coverage">100.00 %</td>
+            <td class="cell--number">6</td>
+            <td class="cell--number">4</td>
+            <td class="cell--number">4</td>
+            <td class="cell--number">0</td>
+            <td class="cell--number">1.50</td>
+            
+          </tr>
+        
+          <tr class="t-file">
             <td class="strong t-file__name"><a href="#729dbff27b9c93d87add1d8c57e208aa2e42eef0" class="src_link" title="app/controllers/parks_controller.rb">app/controllers/parks_controller.rb</a></td>
             <td class="green strong cell--number t-file__coverage">100.00 %</td>
             <td class="cell--number">9</td>
@@ -99,7 +110,7 @@
             <td class="cell--number">5</td>
             <td class="cell--number">5</td>
             <td class="cell--number">0</td>
-            <td class="cell--number">1.00</td>
+            <td class="cell--number">1.20</td>
             
           </tr>
         
@@ -293,9 +304,9 @@
           <tr class="t-file">
             <td class="strong t-file__name"><a href="#f47da98c55bfb30a7fa79babd71c543ac4e68293" class="src_link" title="config/routes.rb">config/routes.rb</a></td>
             <td class="green strong cell--number t-file__coverage">100.00 %</td>
-            <td class="cell--number">7</td>
-            <td class="cell--number">5</td>
-            <td class="cell--number">5</td>
+            <td class="cell--number">8</td>
+            <td class="cell--number">6</td>
+            <td class="cell--number">6</td>
             <td class="cell--number">0</td>
             <td class="cell--number">1.00</td>
             
@@ -309,6 +320,17 @@
             <td class="cell--number">10</td>
             <td class="cell--number">0</td>
             <td class="cell--number">1.00</td>
+            
+          </tr>
+        
+          <tr class="t-file">
+            <td class="strong t-file__name"><a href="#d61fc01b50593bc68a12c15f98a9c31d614992ec" class="src_link" title="spec/features/parks/trails/index_spec.rb">spec/features/parks/trails/index_spec.rb</a></td>
+            <td class="green strong cell--number t-file__coverage">100.00 %</td>
+            <td class="cell--number">21</td>
+            <td class="cell--number">14</td>
+            <td class="cell--number">14</td>
+            <td class="cell--number">0</td>
+            <td class="cell--number">1.21</td>
             
           </tr>
         
@@ -412,6 +434,103 @@
       
         <div>
           <li class="never" data-hits="" data-linenumber="2">
+            
+            
+
+            
+
+            <code class="ruby">end</code>
+          </li>
+        </div>
+      
+    </ol>
+  </pre>
+</div>
+
+      
+        <div class="source_table" id="05432f3be4fb1aa8a07ac471d1f663d44ee25865">
+  <div class="header">
+    <h3>app/controllers/park_trails_controller.rb</h3>
+    <h4>
+      <span class="green">
+  100.0%
+</span>
+
+      lines covered
+    </h4>
+
+    
+
+    <div class="t-line-summary">
+      <b>4</b> relevant lines.
+      <span class="green"><b>4</b> lines covered</span> and
+      <span class="red"><b>0</b> lines missed.</span>
+    </div>
+
+    
+
+  </div>
+
+  <pre>
+    <ol>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="1">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">class ParkTrailsController &lt; ApplicationController</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="2">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">  def index</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="2" data-linenumber="3">
+            <span class="hits">2</span>
+            
+
+            
+
+            <code class="ruby">    @park = Park.find(params[:id])</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="2" data-linenumber="4">
+            <span class="hits">2</span>
+            
+
+            
+
+            <code class="ruby">    @trails = @park.trails</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="5">
+            
+            
+
+            
+
+            <code class="ruby">  end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="6">
             
             
 
@@ -649,8 +768,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="7">
-            <span class="hits">1</span>
+          <li class="covered" data-hits="2" data-linenumber="7">
+            <span class="hits">2</span>
             
 
             
@@ -3449,8 +3568,8 @@
     
 
     <div class="t-line-summary">
-      <b>5</b> relevant lines.
-      <span class="green"><b>5</b> lines covered</span> and
+      <b>6</b> relevant lines.
+      <span class="green"><b>6</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
 
@@ -3528,7 +3647,18 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="7">
+          <li class="covered" data-hits="1" data-linenumber="7">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">  get &#39;/parks/:id/trails&#39;, to: &#39;park_trails#index&#39;</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="8">
             
             
 
@@ -3780,6 +3910,268 @@
       
         <div>
           <li class="never" data-hits="" data-linenumber="20">
+            
+            
+
+            
+
+            <code class="ruby">end</code>
+          </li>
+        </div>
+      
+    </ol>
+  </pre>
+</div>
+
+      
+        <div class="source_table" id="d61fc01b50593bc68a12c15f98a9c31d614992ec">
+  <div class="header">
+    <h3>spec/features/parks/trails/index_spec.rb</h3>
+    <h4>
+      <span class="green">
+  100.0%
+</span>
+
+      lines covered
+    </h4>
+
+    
+
+    <div class="t-line-summary">
+      <b>14</b> relevant lines.
+      <span class="green"><b>14</b> lines covered</span> and
+      <span class="red"><b>0</b> lines missed.</span>
+    </div>
+
+    
+
+  </div>
+
+  <pre>
+    <ol>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="1">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">require &#39;rails_helper&#39;</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="2">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="3">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">RSpec.describe &#39;Parks Trails Index&#39; do</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="4">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">  before :each do</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="2" data-linenumber="5">
+            <span class="hits">2</span>
+            
+
+            
+
+            <code class="ruby">    @yosemite = Park.create!(name:&#39;Yosemite&#39;, open:true, size:1169)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="2" data-linenumber="6">
+            <span class="hits">2</span>
+            
+
+            
+
+            <code class="ruby">    @falls = Trail.create!(name:&#39;Yosemite Falls&#39;, hikable:true, length:7, park_id:@yosemite.id)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="2" data-linenumber="7">
+            <span class="hits">2</span>
+            
+
+            
+
+            <code class="ruby">    @half_dome = Trail.create!(name:&#39;Half Dome&#39;, hikable:true, length:17, park_id:@yosemite.id)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="8">
+            
+            
+
+            
+
+            <code class="ruby">  end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="9">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">  it &quot;shows all trails a park has&quot; do</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="10">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    visit &quot;/parks/#{@yosemite.id}/trails&quot;</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="11">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="12">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    expect(page).to have_content(@falls.name)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="13">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    expect(page).to have_content(@half_dome.name)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="14">
+            
+            
+
+            
+
+            <code class="ruby">  end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="15">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="16">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">  it &#39;links to each trails show page&#39; do</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="17">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    visit &quot;/parks/#{@yosemite.id}/trails&quot;</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="18">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    click_on @falls.name</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="19">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    expect(current_path).to eq(&quot;/trails/#{@falls.id}&quot;)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="20">
+            
+            
+
+            
+
+            <code class="ruby">  end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="21">
             
             
 
