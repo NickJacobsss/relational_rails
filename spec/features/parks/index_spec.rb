@@ -13,4 +13,14 @@ RSpec.describe 'The parks index page', type: :feature do
     expect(page).to have_content(@grand_canyon.name)
     expect(page).to have_content(@zion.name)
   end
+
+  it "shows parks in order by created_at and shows created at timestamp" do
+    visit '/parks'
+    expect(page).to have_content("Added at: #{@yosemite.created_at}")
+    expect(page).to have_content("Added at: #{@grand_canyon.created_at}")
+    expect(page).to have_content("Added at: #{@zion.created_at}")
+    expect(@yosemite.name).to appear_before(@grand_canyon.name)
+    expect(@grand_canyon.name).to appear_before(@zion.name)
+    expect(@zion.name).not_to appear_before(@yosemite.name)
+  end
 end
