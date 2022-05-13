@@ -6,5 +6,9 @@ class Park < ApplicationRecord
 
   def self.ordered
     order(:created_at)
-  end 
+  end
+
+  def trail_count
+    trails.count
+  end
 end
