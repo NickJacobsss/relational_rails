@@ -13,9 +13,24 @@ RSpec.describe 'Parks Trails Index' do
     expect(page).to have_content(@half_dome.name)
   end
 
-  it 'links to each trails show page' do
-    visit "/parks/#{@yosemite.id}/trails"
-    click_on @falls.name
-    expect(current_path).to eq("/trails/#{@falls.id}")
+  describe 'links' do
+    
+    it 'links to each trails show page' do
+      visit "/parks/#{@yosemite.id}/trails"
+      click_on @falls.name
+      expect(current_path).to eq("/trails/#{@falls.id}")
+    end
+
+    it "links to Parks Index page" do
+      visit "/parks/#{@yosemite.id}/trails"
+      click_on 'Parks Index'
+      expect(current_path).to eq('/parks/')
+    end
+
+    it "links to Trails Index page" do
+      visit "/parks/#{@yosemite.id}/trails"
+      click_on 'Trails Index'
+      expect(current_path).to eq('/trails/')
+    end
   end
 end
