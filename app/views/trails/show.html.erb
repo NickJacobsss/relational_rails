@@ -1,4 +1,6 @@
-<a href='/trails'> Back to Trails Index </a>
+<%= link_to 'Parks Index', '/parks/' %>
+<%= link_to 'Trails Index', '/trails/' %>
+
 <h1><%= @trail.name %> </h1>
 <p>Trail is Hikeable: <%= @trail.hikable %> </p>
 <p>Trail Length: <%= @trail.length %> Miles </p>
