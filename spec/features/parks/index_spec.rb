@@ -23,4 +23,19 @@ RSpec.describe 'The parks index page', type: :feature do
     expect(@grand_canyon.name).to appear_before(@zion.name)
     expect(@zion.name).not_to appear_before(@yosemite.name)
   end
+
+  describe 'links' do
+
+    it "links to Parks Index page" do
+      visit "/parks/"
+      click_on 'Parks Index'
+      expect(current_path).to eq('/parks/')
+    end
+
+    it "links to Trails Index page" do
+      visit "/parks/"
+      click_on 'Trails Index'
+      expect(current_path).to eq('/trails/')
+    end
+  end
 end

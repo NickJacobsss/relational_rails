@@ -1,5 +1,8 @@
-<a href='/parks'> Back to Parks Index </a>
+<%= link_to 'Parks Index', '/parks/' %>
+<%= link_to 'Trails Index', '/trails/' %>
+
 <h1><%= @park.name %> </h1>
+<h3><%= link_to 'Trails at this Park', "/parks/#{@park.id}/trails" %></h3>
 <p>Trails Available: <%= @park.trail_count%> </p>
 <p>Park Open: <%=@park.open%> </p>
 <p>Park Size: <%=@park.size%> Square Miles </p>

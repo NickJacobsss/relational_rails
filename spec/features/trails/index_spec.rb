@@ -22,4 +22,19 @@ RSpec.describe 'The trails index page', type: :feature do
     expect(page).to have_content(@angels_landing.name)
     expect(page).to have_content(@observation_point.name)
   end
+
+  describe 'links' do
+
+    it "links to Parks Index page" do
+      visit "/trails/"
+      click_on 'Parks Index'
+      expect(current_path).to eq('/parks/')
+    end
+
+    it "links to Trails Index page" do
+      visit "/trails/"
+      click_on 'Trails Index'
+      expect(current_path).to eq('/trails/')
+    end
+  end 
 end
