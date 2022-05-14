@@ -1,3 +1,6 @@
+<%= link_to 'Parks Index', '/parks/' %>
+<%= link_to 'Trails Index', '/trails/' %>
+
 <h1> Parks </h1>
 <% @parks.each do |park| %>
 <p> <h3><a href='/parks/<%=park.id %>'><%= park.name %> </a></h3>
