@@ -5,7 +5,7 @@ class Park < ApplicationRecord
   validates_inclusion_of :open, :in => [true,false]
 
   def self.ordered
-    order(:created_at)
+    order(created_at: :desc)
   end
 
   def trail_count
