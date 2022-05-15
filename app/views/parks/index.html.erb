@@ -1,7 +1,9 @@
 <%= link_to 'Parks Index', '/parks/' %>
 <%= link_to 'Trails Index', '/trails/' %>
+<h3><p><%= link_to 'Create New Park', '/parks/new' %></p></h3>
 
-<h1> Parks </h1>
+<h1>Parks</h1>
+
 <% @parks.each do |park| %>
 <p> <h3><a href='/parks/<%=park.id %>'><%= park.name %> </a></h3>
 (Added at: <%=park.created_at%>)</p>
