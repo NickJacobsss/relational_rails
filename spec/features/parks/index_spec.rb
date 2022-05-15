@@ -19,9 +19,9 @@ RSpec.describe 'The parks index page', type: :feature do
     expect(page).to have_content("Added at: #{@yosemite.created_at}")
     expect(page).to have_content("Added at: #{@grand_canyon.created_at}")
     expect(page).to have_content("Added at: #{@zion.created_at}")
-    expect(@yosemite.name).to appear_before(@grand_canyon.name)
-    expect(@grand_canyon.name).to appear_before(@zion.name)
-    expect(@zion.name).not_to appear_before(@yosemite.name)
+    expect(@zion.name).to appear_before(@grand_canyon.name)
+    expect(@grand_canyon.name).to appear_before(@yosemite.name)
+    expect(@yosemite.name).not_to appear_before(@zion.name)
   end
 
   describe 'links' do
@@ -36,6 +36,12 @@ RSpec.describe 'The parks index page', type: :feature do
       visit "/parks/"
       click_on 'Trails Index'
       expect(current_path).to eq('/trails/')
+    end
+
+    it "links to parks new page from park index" do
+      visit "/parks/"
+      click_on 'Create New Park'
+      expect(current_path).to eq('/parks/new')
     end
   end
 end
