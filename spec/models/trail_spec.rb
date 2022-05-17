@@ -22,13 +22,19 @@ RSpec.describe Trail, type: :model do
     end
 
     it 'sorts park-trails alphebetically' do
-      Park.destroy_all
-      Trail.destroy_all
       yosemite = Park.create!(name:'Yosemite', open:true, size:1169)
       falls = Trail.create!(name:'Yosemite Falls', hikable:true, length:7, park_id:yosemite.id)
       half_dome = Trail.create!(name:'Half Dome', hikable:true, length:17, park_id:yosemite.id)
       test_trail = Trail.create!(name: 'Test',hikable:true, length:100, park_id:yosemite.id)
       expect(yosemite.trails.sort_alphabetically).to eq([half_dome,test_trail,falls])
+    end
+
+    it "can filter for minimum trail distance" do
+      yosemite = Park.create!(name:'Yosemite', open:true, size:1169)
+      falls = Trail.create!(name:'Yosemite Falls', hikable:true, length:7, park_id:yosemite.id)
+      half_dome = Trail.create!(name:'Half Dome', hikable:true, length:17, park_id:yosemite.id)
+      test_trail = Trail.create!(name: 'Test',hikable:true, length:100, park_id:yosemite.id)
+      expect(Trail.minimum_length(18)).to eq([test_trail])
     end
   end
 end
