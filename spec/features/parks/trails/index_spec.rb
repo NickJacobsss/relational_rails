@@ -38,5 +38,11 @@ RSpec.describe 'Parks Trails Index' do
       click_on "Add New Trail to Park"
       expect(current_path).to eq("/parks/#{@yosemite.id}/trails/new")
     end
+
+    it "links to parks trails sorted in alphabetical order" do
+      visit "/parks/#{@yosemite.id}/trails"
+      click_on "Sort Alphabetically"
+      expect(current_path).to eq("/parks/#{@yosemite.id}/trails")
+    end
   end
 end
