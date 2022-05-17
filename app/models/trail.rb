@@ -11,4 +11,8 @@ class Trail < ApplicationRecord
     def self.sort_alphabetically
       order(:name)
     end
+
+    def self.minimum_length(minimum)
+      where("length > ?", minimum)
+    end 
   end
