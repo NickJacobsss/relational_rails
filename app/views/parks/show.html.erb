@@ -1,5 +1,7 @@
 <%= link_to 'Parks Index', '/parks/' %>
 <%= link_to 'Trails Index', '/trails/' %>
+<%= button_to "Delete Park", "/parks/#{@park.id}", method: :delete %>
+
 
 <h1><%= @park.name %> </h1>
 <h3><%= link_to 'Trails at this Park', "/parks/#{@park.id}/trails" %></h3>
