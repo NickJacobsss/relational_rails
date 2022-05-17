@@ -30,4 +30,19 @@ RSpec.describe "the trails show page" do
       expect(current_path).to eq('/trails/')
     end
   end
+
+  describe 'edit & update trails' do
+    it "can update an existing trail" do
+      visit "/trails/#{@half_dome.id}"
+      click_on 'Update Trail Information'
+      expect(current_path).to eq("/trails/#{@half_dome.id}/edit")
+      fill_in("name", with: "Test Name")
+      fill_in("hikable", with: true)
+      fill_in("length", with: 7)
+      click_button("Submit")
+      expect(current_path).to eq("/trails/#{@half_dome.id}")
+      expect(page).to have_content("Test Name")
+      expect(page).to_not have_content("Half Dome")
+    end
+  end
 end

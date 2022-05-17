@@ -8,3 +8,4 @@
 <p>Park Size: <%=@park.size%> Square Miles </p>
 <p>Created at: <%=@park.created_at%></p>
 <p>Updated at: <%=@park.updated_at%></p>
+<h3><%= link_to 'Update Park Information', "/parks/#{@park.id}/edit" %></h3>
