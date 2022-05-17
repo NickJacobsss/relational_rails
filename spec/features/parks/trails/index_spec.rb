@@ -45,4 +45,15 @@ RSpec.describe 'Parks Trails Index' do
       expect(current_path).to eq("/parks/#{@yosemite.id}/trails")
     end
   end
+
+  describe "filtering" do
+    it "can filter out trails below the minimum length" do
+    visit "/parks/#{@yosemite.id}/trails"
+    fill_in(:length, with: "8")
+    click_on("Return Trails Longer than Minimum Length")
+    expect(current_path).to eq("/parks/#{@yosemite.id}/trails")
+    expect(page).to have_content(@half_dome.name)
+    expect(page).to_not have_content(@falls.name)
+    end
+  end
 end
