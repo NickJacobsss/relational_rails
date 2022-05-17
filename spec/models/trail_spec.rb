@@ -12,4 +12,23 @@ RSpec.describe Trail, type: :model do
   describe 'relationships' do
     it { should belong_to :park}
   end
+
+  describe 'methods' do
+    it "only shows records that have hikable: true" do
+      grand_canyon = Park.create!(name:'Grand Canyon', open:true, size:1902)
+      ooh_ahh = Trail.create!(name:"OOH AHH Point", hikable:true, length:2, park_id:grand_canyon.id)
+      bright_angel = Trail.create!(name:'Bright Angel Trail', hikable: false, length:15, park_id:grand_canyon.id)
+      expect(Trail.only_true).to eq([ooh_ahh])
+    end
+
+    it 'sorts park-trails alphebetically' do
+      Park.destroy_all
+      Trail.destroy_all
+      yosemite = Park.create!(name:'Yosemite', open:true, size:1169)
+      falls = Trail.create!(name:'Yosemite Falls', hikable:true, length:7, park_id:yosemite.id)
+      half_dome = Trail.create!(name:'Half Dome', hikable:true, length:17, park_id:yosemite.id)
+      test_trail = Trail.create!(name: 'Test',hikable:true, length:100, park_id:yosemite.id)
+      expect(yosemite.trails.sort_alphabetically).to eq([half_dome,test_trail,falls])
+    end
+  end
 end
