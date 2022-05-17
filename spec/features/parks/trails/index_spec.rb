@@ -14,7 +14,7 @@ RSpec.describe 'Parks Trails Index' do
   end
 
   describe 'links' do
-    
+
     it 'links to each trails show page' do
       visit "/parks/#{@yosemite.id}/trails"
       click_on @falls.name
@@ -31,6 +31,12 @@ RSpec.describe 'Parks Trails Index' do
       visit "/parks/#{@yosemite.id}/trails"
       click_on 'Trails Index'
       expect(current_path).to eq('/trails/')
+    end
+
+    it "links to Park Trails New Page" do
+      visit "/parks/#{@yosemite.id}/trails"
+      click_on "Add New Trail to Park"
+      expect(current_path).to eq("/parks/#{@yosemite.id}/trails/new")
     end
   end
 end
