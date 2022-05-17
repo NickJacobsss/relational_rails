@@ -8,5 +8,6 @@
 <p> <h2><a href='/parks/<%=park.id %>'><%= park.name %> </a></h2>
 (Added at: <%=park.created_at%>)</p>
 <h5><%= link_to 'Update Park Information', "/parks/#{park.id}/edit" %></h5>
+<h5><%= button_to "Delete Park", "/parks/#{park.id}", method: :delete %></h5>
 <br>
 <% end %>
