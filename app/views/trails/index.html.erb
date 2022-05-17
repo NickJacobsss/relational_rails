@@ -5,4 +5,5 @@
 <% @trails.each do |trail| %>
 <h2> <a href='/trails/<%=trail.id %>'><%= trail.name %> </a></h2>
 <%= link_to 'Update Trail Information', "/trails/#{trail.id}/edit" %>
+<h5><%= button_to "Delete Trail", "/trails/#{trail.id}", method: :delete %></h5>
 <% end %>
