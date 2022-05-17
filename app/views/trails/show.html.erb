@@ -1,5 +1,6 @@
 <%= link_to 'Parks Index', '/parks/' %>
 <%= link_to 'Trails Index', '/trails/' %>
+<h3><%= link_to 'Update Trail Information', "/trails/#{@trail.id}/edit" %></h3>
 
 <h1><%= @trail.name %> </h1>
 <p>Trail is Hikeable: <%= @trail.hikable %> </p>
