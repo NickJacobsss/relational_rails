@@ -42,4 +42,19 @@ RSpec.describe "the parks show page" do
       expect(current_path).to eq("/parks/#{@yosemite.id}/trails")
     end
   end
+
+  describe 'editing and updating information' do
+    it "can update an existing park with new information" do
+      visit "/parks/#{@yosemite.id}"
+      click_on 'Update Park Information'
+      expect(current_path).to eq("/parks/#{@yosemite.id}/edit")
+      fill_in("name", with: "Rocky National Park")
+      fill_in("open", with: false)
+      fill_in("size", with:415)
+      click_button("Submit")
+      expect(current_path).to eq("/parks/#{@yosemite.id}")
+      expect(page).to have_content("Rocky National Park")
+      expect(page).to_not have_content("Yosemite")
+    end
+  end
 end
