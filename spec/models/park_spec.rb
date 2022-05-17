@@ -13,7 +13,7 @@ RSpec.describe Park, type: :model do
     it { should have_many :trails}
   end
 
-  describe 'instance methods' do
+  describe 'methods' do
     describe '#trail_count' do
       before :each do
         @yosemite = Park.create!(name:'Yosemite', open:true, size:1169)
