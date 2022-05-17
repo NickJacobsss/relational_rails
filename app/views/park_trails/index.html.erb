@@ -1,8 +1,16 @@
 <%= link_to 'Parks Index', '/parks/' %>
 <%= link_to 'Trails Index', '/trails/' %>
 <h3><%= link_to 'Add New Trail to Park', "/parks/#{@park.id}/trails/new" %></h3>
-<h3><%= link_to 'Sort Alphabetically', sort: "alphabetically" %></h3>
 <h1><%=@park.name%> Trails:</h1>
+<h3><%= link_to 'Sort Alphabetically', sort: "alphabetically" %></h3>
 <% @trails.each do |trail| %>
 <p><%= link_to trail.name, "/trails/#{trail.id}"%><p>
+<% end %>
+<br>
+<h3>Filter Trails by Length:</h3>
+<%= form_with url: "/parks/#{@park.id}/trails", method: :get, local:true do |form|%>
+<%= form.label :length, "Minimum Trail Length"  %>
+<%= form.text_field :length %>
+<p><%= form.submit "Return Trails Longer than Minimum Length" %></p>
+
 <% end %>

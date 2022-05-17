@@ -46,4 +46,15 @@ RSpec.describe 'The trails index page', type: :feature do
       expect(page).to_not have_content(@bright_angel.name)
     end
   end
+
+  describe "deletion" do
+    it "can delete parent from index page " do
+      Trail.destroy_all
+      @half_dome = Trail.create!(name:'Half Dome', hikable:true, length:17, park_id:@yosemite.id)
+      visit "/trails"
+      click_button("Delete Trail")
+      expect(current_path).to eq('/trails')
+      expect(page).to_not have_content("Half Dome")
+    end
+  end
 end
