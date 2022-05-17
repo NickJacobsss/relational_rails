@@ -44,4 +44,15 @@ RSpec.describe 'The parks index page', type: :feature do
       expect(current_path).to eq('/parks/new')
     end
   end
+
+  describe "deletion" do
+    it "can delete parent from index page " do
+      Park.destroy_all
+      @yosemite = Park.create!(name:'Yosemite', open:true, size:1169)
+      visit "/parks"
+      click_button("Delete Park")
+      expect(current_path).to eq('/parks')
+      expect(page).to_not have_content("Yosemite")
+    end
+  end
 end
