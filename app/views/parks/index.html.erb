@@ -5,6 +5,8 @@
 <h1>Parks</h1>
 
 <% @parks.each do |park| %>
-<p> <h3><a href='/parks/<%=park.id %>'><%= park.name %> </a></h3>
+<p> <h2><a href='/parks/<%=park.id %>'><%= park.name %> </a></h2>
 (Added at: <%=park.created_at%>)</p>
+<h5><%= link_to 'Update Park Information', "/parks/#{park.id}/edit" %></h5>
+<br>
 <% end %>

@@ -18,7 +18,7 @@ RSpec.describe 'The trails index page', type: :feature do
     expect(page).to have_content(@half_dome.name)
     expect(page).to have_content(@falls.name)
     expect(page).to have_content(@ooh_ahh.name)
-    expect(page).to have_content(@bright_angel.name)
+    # expect(page).to have_content(@bright_angel.name)
     expect(page).to have_content(@angels_landing.name)
     expect(page).to have_content(@observation_point.name)
   end
@@ -36,5 +36,14 @@ RSpec.describe 'The trails index page', type: :feature do
       click_on 'Trails Index'
       expect(current_path).to eq('/trails/')
     end
-  end 
+  end
+
+  describe 'sorting' do
+    it "only shows hikable:true records " do
+      visit "/trails/"
+      expect(page).to have_content(@falls.name)
+      expect(page).to have_content(@ooh_ahh.name)
+      expect(page).to_not have_content(@bright_angel.name)
+    end
+  end
 end

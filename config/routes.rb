@@ -6,19 +6,15 @@ Rails.application.routes.draw do
   post '/parks', to: 'parks#create'
   get 'parks/:id/edit', to: 'parks#edit'
   patch '/parks/:id', to: 'parks#update'
+  delete '/parks/:id', to: 'parks#destroy'
 
   get '/trails', to: 'trails#index'
   get '/trails/:id/edit', to: 'trails#edit'
   get '/trails/:id', to: 'trails#show'
   patch '/trails/:id', to: 'trails#update'
-
-
+  delete '/trails/:id', to: 'trails#destroy'
 
   post '/parks/:id/trails', to: 'park_trails#create'
   get '/parks/:id/trails/new', to: 'park_trails#new'
   get '/parks/:id/trails', to: 'park_trails#index'
-
-
-
-
 end

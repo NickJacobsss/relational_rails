@@ -1,5 +1,5 @@
 class Park < ApplicationRecord
-  has_many :trails
+  has_many :trails, :dependent => :destroy
   validates_presence_of :name
   validates_presence_of :size
   validates_inclusion_of :open, :in => [true,false]
@@ -11,4 +11,5 @@ class Park < ApplicationRecord
   def trail_count
     trails.count
   end
+
 end
