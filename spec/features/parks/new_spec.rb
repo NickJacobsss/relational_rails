@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe "Parks Creation Page", type: :feature do
 
-  it "can create a new artist" do
+  it "can create a new park" do
     visit "/parks/new"
     fill_in("name", with: "Rocky National Park")
     fill_in("open", with: true )
