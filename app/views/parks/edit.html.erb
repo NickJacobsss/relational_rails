@@ -1,0 +1,9 @@
+<%= form_with url: "/parks/#{@park.id}", method: :patch, local:true do |form|%>
+<p><%= form.label :name, "Park Name:"  %>
+<%= form.text_field :name %></p>
+<p><%= form.label :size, "Size: (Miles)"  %>
+<%= form.text_field :size %></p>
+<p><%= form.label :open, "Open: True/False"  %>
+<%= form.text_field :open %></p>
+<p><%= form.submit "Submit" %></p>
+<% end %>
