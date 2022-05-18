@@ -1,5 +1,3 @@
-<%= link_to 'Parks Index', '/parks/' %>
-<%= link_to 'Trails Index', '/trails/' %>
 <h3><%= link_to 'Add New Trail to Park', "/parks/#{@park.id}/trails/new" %></h3>
 <h1><%=@park.name%> Trails:</h1>
 <h3><%= link_to 'Sort Alphabetically', sort: "alphabetically" %></h3>

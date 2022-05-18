@@ -1,6 +1,3 @@
-<%= link_to 'Parks Index', '/parks/' %>
-<%= link_to 'Trails Index', '/trails/' %>
-
 <h1> Open Trails: </h1>
 <% @trails.each do |trail| %>
 <h2> <a href='/trails/<%=trail.id %>'><%= trail.name %> </a></h2>
